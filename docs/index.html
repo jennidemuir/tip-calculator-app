@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <h1> <span>SPLI</span> <span>TTER</span></h1>
+    <div class="container">
+
+        <form class='calcContainer' autocomplete="off" action="calcContainer">
+            <label class='label' id='billLabel' for="bill">Bill</label>
+            <input class='inputText input'  id="billInput" type="text" name="bill" autocomplete="off" placeholder="0" value=''>
+            <label class='label' for="selectTip">Select Tip % </label>
+            <div class='tipsContainer'>
+                <button class='tipValue' id='five' name='selectTip'  value='0.05'>5%</button>
+                <button class='tipValue' id='ten' name='selectTip'  value='.1'>10%</button>
+                <button class='tipValue' id='fifteen' name='selectTip'  value='.15'>15%</button>
+                <button class='tipValue' id='twentyfive' name='selectTip'  value='.25'>25%</button>
+                <button class='tipValue' id='fiftey' name='selectTip'  value='.5' >50%</button>
+                <input  class='tipValue input' id='custom' type="text" name='selectTip' placeholder='Custom' value=''>
+
+            </div >
+            <div class='pplContainer'>
+                <label class='label' id='pplLabel' for="numberOfPeople">Number of People</label>
+                <span  id='warningLabel'></span>
+            </div>
+
+            <input class='inputText warning' id='pplInput' type="text" name='numberOfPeople' placeholder='0' value=''>
+        </form>
+
+        <div class='resultContainer'>
+            <div class="Amt">
+                <div>
+                <p class='amtBold'>Tip Amount</p>
+                <p class='amtSmall' >/ person</p>
+                </div>
+                <span class='results' id='tipAmt'>$0.00</span>
+            </div>
+            <div class="Amt">
+                <div>
+                    <p class='amtBold' >Total</p>
+                    <p class='amtSmall' >/ person</p>
+                </div>
+                <span class='results'  id='ttlAmt'>$0.00</span>
+            </div>
+            <button class='resetBttn'>RESET</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
